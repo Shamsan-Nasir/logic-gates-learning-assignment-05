@@ -39,11 +39,11 @@
             <!-- nav button and stats -->
 
             <div class="flex justify-end items-center gap-4">
-                <div class="bg-light rounded-[50px] flex justify-center items-center gap-2 px-9 py-3">
+                <div class="bg-light rounded-[50px] flex justify-center items-center gap-2 lg:px-9 lg:py-3">
                     <div class="heart-no font-bold">0</div>
                     <img src="assets/heart.png" alt="heart" class="w-[30px]">
                 </div>
-                <div class="bg-light rounded-[50px] flex justify-center items-center gap-2 px-9 py-3">
+                <div class="bg-light rounded-[50px] flex justify-center items-center gap-2 lg:px-9 lg:py-3">
                     <div class="coin-no font-bold">0</div>
                     <img src="assets/coin.png" alt="money" class="w-[30px]">
                 </div>
@@ -62,7 +62,7 @@
         </section>
     </header>
     <!-- main body section  -->
-    <section class="bg-light p-7 grid grid-cols-4 grid-rows-3 gap-4">
+    <section class="bg-light p-7 grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-4">
         
         <!-- call cards -->
 
@@ -95,8 +95,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Police</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="police-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="police-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -112,18 +112,21 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Fire</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="fire-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="fire-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
         <!-- history column  -->
-        <div class="bg-white rounded-xl row-span-3">
+
+
+        <div class="bg-white rounded-xl row-span-3 p-6 hidden lg:block">
             <div class="flex justify-between">
-                <div> Call History</div>
-                <button class="bg-btn text-white">Clear</button>
+                <div class="flex gap-1 items-center font-bold"><i class="fa-regular fa-clock" style="color: rgb(30, 48, 80);"></i> Call History</div>
+                <button class="bg-btn text-white px-5 py-2.5 rounded-[50px]">Clear</button>
             </div>
         </div>
+
 
 
         <div class="bg-white rounded-xl p-4 shadow">
@@ -138,8 +141,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Help</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="women-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="women-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -155,8 +158,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Health</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="ambulance-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="ambulance-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -172,8 +175,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Govt</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="corruption-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="corruption-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -189,8 +192,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Electricity</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="electricity-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="electricity-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -206,8 +209,8 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">NGO</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="brac-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="brac-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
@@ -223,14 +226,19 @@
                 <span class="bg-[#F2F2F2] py-0.5 px-3 text-base rounded-xl">Travel</span>
             </div>
             <div class="flex justify-between gap-1.5">
-                <button id="emergency-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
-                <button id="emergency-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
+                <button id="railway-copy" class="border flex justify-center items-center gap-1 px-8 py-2 rounded-lg w-[49%] text-sm "><i class="fa-regular fa-copy" style="color: rgb(30, 48, 80);"></i> Copy</butt0n>
+                <button id="railway-call" class="bg-btn flex justify-center items-center gap-1 px-8 py-2 text-white rounded-lg w-[49%] text-sm "><i class="fa-solid fa-phone" style="color:white;"></i> Call</butt0n>
             </div>
         </div>
 
- 
 
     </section>
+            <div class="bg-white rounded-xl p-8 lg:hidden">
+            <div class="flex justify-between">
+                <div class="flex gap-1 items-center font-bold"><i class="fa-regular fa-clock" style="color: rgb(30, 48, 80);"></i> Call History</div>
+                <button class="bg-btn text-white px-5 py-2.5 rounded-[50px]">Clear</button>
+            </div>
+        </div>
     
     
 </body>
