@@ -25,6 +25,28 @@ function copyBtnSetup(buttonId,infoId){
 
 }
 
+function generateHistory (name, number) {
+
+    let container = document.createElement("div");
+    let now = new Date().toLocaleTimeString();
+    container.innerHTML = `<div class="flex justify-between rounded-lg my-1.5 bg-gray-100 p-2 w-full">
+                    <div>
+                        <h1 class="font-bold text-sm">${name}</h1>
+                        <p class="text-sm">${number}</p>
+                    </div>
+                    <div class=" flex items-center justify-center text-sm">
+                        ${now}
+                    </div> 
+                </div>`
+    let historyContainer = document.querySelectorAll(".historyContainer");
+    for (let history of historyContainer){
+        const containerClone = container.cloneNode(true);
+        history.appendChild(containerClone)
+    }
+
+
+}
+
 function callBtnSetup(buttonId,numberId,descId){
     
     document.getElementById(buttonId).addEventListener('click', () => {
@@ -38,6 +60,7 @@ function callBtnSetup(buttonId,numberId,descId){
         if (coinNumber >= 20 ) {
             coinNumber -= 20;
             coinNo.innerText = coinNumber;
+            generateHistory(desc.innerText,num.innerText)
             window.alert(`Calling Number for ${desc.innerText}: ${num.innerText}`)        
         }
         else{
@@ -47,6 +70,7 @@ function callBtnSetup(buttonId,numberId,descId){
     })
 
 }
+
 
 
 function heartSetUp (heartClicked, heartUnClicked, heartBorder) {
@@ -103,4 +127,19 @@ callBtnSetup('corruption-call','corruption','corruptionDesc');
 callBtnSetup('electricity-call','electricity','electricityDesc');
 callBtnSetup('brac-call','brac','bracDesc');
 callBtnSetup('railway-call','railway','railwayDesc');
+
+let cancelButton = document.querySelectorAll(".clearBtn")
+
+for (let btn of cancelButton) {
+    
+    btn.addEventListener('click', () => {
+        let container = document.querySelectorAll('.historyContainer')
+        for (let x of container) {
+            console.log(container)
+            x.innerHTML = '';
+            console.log(container)
+        }
+    })
+}
+
  
