@@ -128,18 +128,28 @@ callBtnSetup('electricity-call','electricity','electricityDesc');
 callBtnSetup('brac-call','brac','bracDesc');
 callBtnSetup('railway-call','railway','railwayDesc');
 
-let cancelButton = document.querySelectorAll(".clearBtn")
+let deleteButton = document.querySelectorAll(".clearBtn");
+let confirmation = document.getElementById("confirmDialog");
+let closeBtn = document.getElementById("closeBtn");
+let cancelConfirm = document.getElementById("cancelConfirm")
 
-for (let btn of cancelButton) {
+cancelConfirm.addEventListener('click', () => {
+    confirmation.close();
+})
+
+for (let btn of deleteButton) {
     
     btn.addEventListener('click', () => {
-        let container = document.querySelectorAll('.historyContainer')
-        for (let x of container) {
-            console.log(container)
-            x.innerHTML = '';
-            console.log(container)
-        }
+        confirmation.showModal()
+
     })
 }
 
+closeBtn.addEventListener("click", () => {
+        confirmation.close();
+        let container = document.querySelectorAll('.historyContainer')
+        for (let x of container) {
+            x.innerHTML = '';
+        }
+})
  
